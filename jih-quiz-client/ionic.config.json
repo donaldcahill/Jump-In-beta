@@ -1,0 +1,7 @@
+{
+  "name": "Jump Quiz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

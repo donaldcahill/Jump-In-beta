@@ -1,0 +1,12 @@
+ion-toolbar {
+  --background-color: transparent;
+  --ion-color-base: transparent !important;
+  background: rgb(17,82,147);
+  background: -moz-linear-gradient(183deg, rgba(17,82,147,1) 0%, rgba(0,150,136,1) 100%);
+  background: -webkit-linear-gradient(183deg, rgba(17,82,147,1) 0%, rgba(0,150,136,1) 100%);
+  background: linear-gradient(183deg, rgba(17,82,147,1) 0%, rgba(0,150,136,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#115293",endColorstr="#009688",GradientType=1);
+}
+.redondo{
+  border-radius: 100px !important;
+}

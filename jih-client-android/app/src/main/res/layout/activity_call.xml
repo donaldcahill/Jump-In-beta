@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/web_icon" />
+
+        <TextView
+            android:id="@+id/txtPopuptitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/tiny_text_placeholder"
+            android:textColor="#AA000000"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/txtPopupDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/text_placeholder"
+            android:textColor="#65000000" />
+
+        <!--<ImageButton
+            android:id="@+id/btnCalling"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/logo_llamada"
+            android:tint="#878787" />-->
+        <Button
+            android:id="@+id/btnLlamadaJump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@android:drawable/sym_call_incoming"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="@string/app_name"
+            android:layout_marginBottom="10dp"
+            ></Button>
+
+
+    </LinearLayout>
+</ScrollView>

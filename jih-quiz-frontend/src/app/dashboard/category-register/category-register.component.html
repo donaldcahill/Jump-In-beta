@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header card-header-danger">
+                <h4 class="card-title">History</h4>
+                <p class="card-category">Register a History</p>
+              </div>
+              <div class="card-body">
+                <form [formGroup]="firstFormGroup">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <mat-form-field class="example-full-width">
+                        <input
+                          matInput
+                          placeholder="Title"
+                          type="text"
+                          formControlName="vTitle"
+                          [(ngModel)]="category.title"
+                        />
+                      </mat-form-field>
+                      <app-print-error [control]="f.vTitle"></app-print-error>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-form-field class="example-full-width">
+                        <textarea
+                          matInput
+                          placeholder="Description"
+                          type="text"
+                          formControlName="vDescription"
+                          [(ngModel)]="category.description"
+                        ></textarea>
+                      </mat-form-field>
+                      <app-print-error
+                        [control]="f.vDescription"
+                      ></app-print-error>
+                    </div>
+                  </div>
+
+                  <button
+                    mat-raised-button
+                    type="submit"
+                    class="btn btn-danger pull-right"
+                    [disabled]="firstFormGroup.invalid || !firstFormGroup.dirty"
+                    (click)="registerCategory()"
+                  >
+                    Register
+                  </button>
+                  |
+                  <button
+                    mat-raised-button
+                    type="submit"
+                    class="btn btn-danger pull-right"
+                    (click)="back()"
+                  >
+                    Cancel
+                  </button>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

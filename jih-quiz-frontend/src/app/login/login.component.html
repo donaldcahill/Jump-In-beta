@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="brand-title">QUIZ</div>
+  <div class="inputs">
+    <form [formGroup]="myForm" class="example-form" novalidate>
+      <label>User</label>
+      <input
+        type="text"
+        [(ngModel)]="login.email"
+        formControlName="vLogin"
+        placeholder="Email"
+      />
+      <app-print-error [control]="f.vLogin"></app-print-error>
+      <label>Contraseña</label>
+      <input
+        type="password"
+        [(ngModel)]="login.password"
+        formControlName="vPass"
+        placeholder="Contraseña"
+      />
+      <app-print-error [control]="f.vPass"></app-print-error>
+      <button [disabled]="myForm.invalid || !myForm.dirty" (click)="irInicio()">
+        LOGIN
+      </button>
+      <button (click)="irRegistro()">REGISTRARME</button>
+      <br />
+    </form>
+  </div>
+</div>

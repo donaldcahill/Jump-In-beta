@@ -1,0 +1,33 @@
+<ion-content>
+  <form [formGroup]="myForm" novalidate class="fondo">
+    <div >
+      <div class="margenes-login">
+        <ion-card>
+          <ion-card-content>
+            <img src="../../assets/img/web_icon.png" />
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input formControlName="vLogin" type="email" [(ngModel)]="inicioSesion.user"></ion-input>
+                <ion-icon name="person"  slot="start"></ion-icon>
+
+              </ion-item>
+              <app-error [control]="f.vLogin"></app-error>
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="password" formControlName="vPass" [(ngModel)]="inicioSesion.pass"></ion-input>
+                <ion-icon name="lock-closed"  slot="start"></ion-icon>
+
+              </ion-item>
+              <app-error [control]="f.vPass"></app-error>
+
+              <ion-button class="espaciado" expand="block" [disabled]="myForm.invalid || !myForm.dirty" (click)="onPropagar()">Sign In</ion-button>
+              <ion-button class="espaciado" expand="block" (click)="onIrRegistrar()">Sign Up</ion-button>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+  </form>
+</ion-content>

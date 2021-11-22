@@ -1,0 +1,65 @@
+<ion-header translucent="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" >
+  <img src="../../assets/img/banner.jpg" />
+
+  <form [formGroup]="myForm" novalidate class="ion-padding">
+    <ion-list class="padding-menu" >
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="vName" [(ngModel)]="operador.name"></ion-input>
+        <ion-icon name="person" slot="start"></ion-icon>
+
+      </ion-item>
+      <app-error [control]="f.vName"></app-error>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="vEmail" type="email" [(ngModel)]="operador.email"></ion-input>
+        <ion-icon name="mail" slot="start"></ion-icon>
+
+      </ion-item>
+      <app-error [control]="f.vEmail"></app-error>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="vPass" type="password" [(ngModel)]="operador.pass"></ion-input>
+        <ion-icon name="lock-closed" slot="start"></ion-icon>
+
+      </ion-item>
+      <app-error [control]="f.vPass"></app-error>
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input formControlName="vPhone" type="number" [(ngModel)]="operador.phoneNumber"></ion-input>
+        <ion-icon name="call" slot="start"></ion-icon>
+
+      </ion-item>
+      <app-error [control]="f.vPhone"></app-error>
+      <ion-item>
+        <ion-label position="floating">Country</ion-label>
+        <ion-select formControlName="vCountry"  [(ngModel)]="operador.idCountry">
+          <ion-select-option [value]="item.idCountry" *ngFor="let item of lstCountries">{{item.nameCountry + ' +' + item.callingCode}}</ion-select-option>
+        </ion-select>
+        <ion-icon name="earth" slot="start"></ion-icon>
+
+      </ion-item>
+      <app-error [control]="f.vCountry"></app-error>
+      <ion-item>
+        <ion-label position="floating">Languages</ion-label>
+        <ion-select formControlName="vLanguages"  multiple="true" [(ngModel)]="languagesSelected">
+          <ion-select-option [value]="item.idLanguage" *ngFor="let item of lstLanguages">{{item.description}}</ion-select-option>
+        </ion-select>
+        <ion-icon name="language" slot="start"></ion-icon>
+
+      </ion-item>
+      <app-error [control]="f.vLanguages"></app-error>
+    </ion-list>
+    <ion-button expand="block" [disabled]="myForm.invalid || !myForm.dirty" (click)="grabar()">Sign Up</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,47 @@
+import { Component, OnInit } from '@angular/core';
+import { ContratsService } from '../providers/contrats.service';
+import { UserDataService } from '../providers/user-data.service';
+import { QuizService } from '../providers/quiz.service';
+import { User } from '../../dto/User';
+
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-congrats',
+  templateUrl: './congrats.page.html',
+  styleUrls: ['./congrats.page.scss'],
+})
+export class CongratsPage implements OnInit {
+  mensaje: string;
+  puntuacion = 0;
+  user: User = {} as User;
+  aprobado = false;
+  constructor(
+    private contratService: ContratsService,
+    private userService: UserDataService,
+    public router: Router,
+    public quizService: QuizService
+  ) { }
+
+  ngOnInit() {
+    this.cargarContrats();
+  }
+  cargarContrats() {
+    this.puntuacion = this.contratService.get();
+    this.user = this.userService.get();
+    if (this.puntuacion >= 3) {
+      this.aprobado = true;
+    }
+    else {
+      this.aprobado = false;
+    }
+  }
+  goToHome() {
+    try {
+
+    } catch (e) {
+    }
+    this.router.navigateByUrl('/home');
+  }
+
+}

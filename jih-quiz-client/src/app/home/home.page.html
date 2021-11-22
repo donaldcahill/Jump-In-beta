@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Jump Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <div class="ranking-div">
+              <div class="earned">YOUR RANKING</div>
+              <div class="coin-label">#{{rankingTotal}}</div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="coins-div">
+              <div class="earned">COINS EARNED</div>
+
+              <div class="coin-label">
+                <ion-icon name="cash-outline"></ion-icon>
+                {{puntosTotales}}
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <div class="profile-div" (click)="irPerfil()">
+          <div class="profile-label">YOUR PROFILE</div>
+          <div class="imagen-profile">
+            <img src="../../assets/img/profile.png" />
+          </div>
+          <div class="texto-profile">
+            {{user.firstName + ' ' +user.lastName}}
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-card>
+        <ion-card-content>
+          <a
+            class="btn-quiz"
+            *ngFor="let item of lstCategory"
+            (click)="irHistory(item)"
+          >
+            <img src="../../assets/img/icons/{{item.title}}.png" />
+          </a>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>

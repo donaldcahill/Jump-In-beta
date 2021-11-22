@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-danger">
+          <h3 class="card-title mt-0">Quiz</h3>
+          <h4 class="card-category">List of questions</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <div *ngIf="lstQuestion.length > 0">
+              <table class="table table-hover">
+                <thead class="">
+                  <th>ID</th>
+                  <th>History</th>
+                  <th>Question</th>
+                  <th>State</th>
+                  <th>Action</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of lstQuestion">
+                    <td>{{ item.idQuestion }}</td>
+                    <td>{{ item.idHistory2.title }}</td>
+                    <td>{{ item.question }}</td>
+                    <td>
+                      <div *ngIf="item.state" [matBadge]="item.answers.length">
+                        <mat-icon>done</mat-icon>
+                      </div>
+                      <div *ngIf="!item.state" [matBadge]="item.answers.length">
+                        <mat-icon>close</mat-icon>
+                      </div>
+                    </td>
+                    <td>
+                      <button
+                        mat-icon-button
+                        aria-label="Example icon button with a vertical three dot icon"
+                        (click)="editQuiz(item)"
+                      >
+                        <mat-icon>mode_edit</mat-icon>
+                      </button>
+                      |
+                      <button
+                        mat-icon-button
+                        aria-label="Example icon button with a vertical three dot icon"
+                        (click)="deleteQuiz(item)"
+                      >
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div *ngIf="lstQuestion.length === 0">
+              <h3>No data</h3>
+            </div>
+            <button
+              mat-stroked-button
+              color="primary"
+              (click)="questionRegister()"
+            >
+              Register Question
+            </button>
+            |
+            <button
+              mat-raised-button
+              type="submit"
+              class="btn btn-danger pull-right"
+              (click)="back()"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

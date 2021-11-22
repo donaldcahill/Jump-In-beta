@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(241, 242, 243, 0); display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<defs>
+  <filter id="ldio-i6k0wzgaa3h-filter" x="-100%" y="-100%" width="300%" height="300%" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+    <feComponentTransfer result="cutoff">
+      <feFuncA type="table" tableValues="0 0 0 0 0 0 1 1 1 1 1"></feFuncA>
+    </feComponentTransfer>
+  </filter>
+</defs>
+<g filter="url(#ldio-i6k0wzgaa3h-filter)"><g transform="translate(50 50)">
+<g>
+  <circle cx="25" cy="0" r="5" fill="#009a90">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="6;14;6" dur="4s" repeatCount="indefinite" begin="-0.25s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="4s" repeatCount="indefinite" begin="0s"></animateTransform>
+</g>
+</g><g transform="translate(50 50)">
+<g>
+  <circle cx="25" cy="0" r="5" fill="#f39e1d">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="6;14;6" dur="2s" repeatCount="indefinite" begin="-0.16666666666666666s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="2s" repeatCount="indefinite" begin="-0.08333333333333333s"></animateTransform>
+</g>
+</g><g transform="translate(50 50)">
+<g>
+  <circle cx="25" cy="0" r="5" fill="#015462">
+    <animate attributeName="r" keyTimes="0;0.5;1" values="6;14;6" dur="1.3333333333333333s" repeatCount="indefinite" begin="-0.08333333333333333s"></animate>
+  </circle>
+  <animateTransform attributeName="transform" type="rotate" keyTimes="0;1" values="0;360" dur="1.3333333333333333s" repeatCount="indefinite" begin="-0.16666666666666666s"></animateTransform>
+</g>
+</g></g>
+</svg>

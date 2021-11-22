@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title">Edit Profile</h4>
+          <p class="card-category">Complete your profile</p>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="myForm" class="example-form" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                  <input
+                    matInput
+                    [(ngModel)]="writer.name"
+                    formControlName="vFirstName"
+                    type="text"
+                    placeholder="Fist Name"
+                    type="text"
+                  />
+                </mat-form-field>
+                <app-print-error [control]="f.vFirstName"></app-print-error>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                  <input
+                    matInput
+                    placeholder="Last Name"
+                    [(ngModel)]="writer.lastNabme"
+                    formControlName="vLastName"
+                    type="text"
+                  />
+                </mat-form-field>
+                <app-print-error [control]="f.vLastName"></app-print-error>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <input
+                    matInput
+                    placeholder="Email"
+                    [(ngModel)]="writer.email"
+                    formControlName="vEmail"
+                    type="email"
+                  />
+                </mat-form-field>
+                <app-print-error [control]="f.vEmail"></app-print-error>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <input
+                    matInput
+                    placeholder="Password"
+                    [(ngModel)]="writer.password"
+                    formControlName="vPass"
+                    type="password"
+                  />
+                </mat-form-field>
+                <app-print-error [control]="f.vPass"></app-print-error>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                  <input
+                    matInput
+                    placeholder="Confirm Password"
+                    formControlName="vConfirmPass"
+                    type="password"
+                  />
+                </mat-form-field>
+                <app-print-error [control]="f.vConfirmPass"></app-print-error>
+              </div>
+            </div>
+            <button
+              mat-raised-button
+              type="submit"
+              [disabled]="myForm.invalid || !myForm.dirty"
+              class="btn btn-danger pull-right"
+              (click)="register()"
+            >
+              Register
+            </button>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

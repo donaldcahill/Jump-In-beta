@@ -1,0 +1,17 @@
+<div class="text-danger" *ngIf="control && control.errors && (control.dirty || control.touched)">
+  <mat-error *ngIf="control.errors.required"><small>El campo es <strong>requerido</strong></small></mat-error>
+  <mat-error *ngIf="control.errors.minlength"><small>El campo debe tener {{ control.errors.minlength.requiredLength }} o más caracteres.</small></mat-error>
+  <mat-error *ngIf="control.errors.maxlength"><small>El campo no debe tener mas de {{ control.errors.maxlength.requiredLength }} caracteres.</small></mat-error>
+  <mat-error *ngIf="control.errors.email"><small>El correo no cumple con el formato requerido.</small></mat-error>
+  <mat-error *ngIf="control.errors.pattern"><small>El campo no cumple con el formato requerido.</small></mat-error>
+  <mat-error *ngIf="control.errors.min"><small>El campo debe ser mayor o igual a {{ control.errors.min.min }}.</small></mat-error>
+  <mat-error *ngIf="control.errors.max"><small>El campo debe ser menor o igual a {{ control.errors.max.max }}.</small></mat-error>
+  <mat-error *ngIf="control.errors.unique"><small>{{control.errors.unique}}</small></mat-error>
+  <mat-error *ngIf="control.errors.lessThen"><small>{{control.errors.lessThen}}</small></mat-error>
+  <mat-error *ngIf="control.errors.greaterThan"><small>{{control.errors.greaterThan}}</small></mat-error>
+  <mat-error *ngIf="control.errors.mobile"><small>{{control.errors.mobile}}</small></mat-error>
+  <mat-error *ngIf="control.errors.confirmPassword"><small>{{control.errors.confirmPassword}}</small></mat-error>
+  <mat-error *ngIf="control.errors.mustMatch"><small>Las contraseñas no coinciden</small></mat-error>
+  <mat-error *ngIf="control.errors.validarUnico"><small>El dato ya existe</small></mat-error>
+</div>
+

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Jump In Help Client</string>
+    <string name="content_description_media">Descripcion media</string>
+    <string name="title">Titulo</string>
+    <string name="secondary_text">texto secundario</string>
+    <string name="supporting_text">supporting text</string>
+    <string name="action_1">Sign Up</string>
+    <string name="action_2">Sign In</string>
+    <string name="action_3">Start</string>
+    <string name="content_description_more">Prueba</string>
+    <string name="more">Mas</string>
+    <string name="content_description_search">Descripcion Search</string>
+    <string name="search">buscar</string>
+    <string name="content_description_favorite">Favoritos</string>
+    <string name="favorite">Favoritos</string>
+
+    <string name="text_placeholder" translatable="false">You must press the button so that an expert can help you.</string>
+    <string name="small_text_placeholder" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dapibus lectus. Aenean tempor accumsan massa ut pharetra.</string>
+    <string name="smaller_text_placeholder" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed dapibus lectus.</string>
+    <string name="tiny_text_placeholder" translatable="false">Lorem ipsum dolor</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="language">Language</string>
+    <string name="country">Country</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="label_1">$ 9.99 - 10 asissted calls included \r\n - 0.99 each additional call.</string>
+</resources>

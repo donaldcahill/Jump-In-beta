@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header card-header-danger">
+                <h4 class="card-title">History</h4>
+                <p class="card-category">Register a History</p>
+              </div>
+              <div class="card-body">
+                <form [formGroup]="firstFormGroup">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <mat-form-field class="example-full-width">
+                        <input
+                          matInput
+                          placeholder="Title"
+                          type="text"
+                          formControlName="vTitle"
+                          [(ngModel)]="history.title"
+                        />
+                      </mat-form-field>
+                      <app-print-error [control]="f.vTitle"></app-print-error>
+                    </div>
+                    <div class="col-md-6">
+                      <mat-form-field appearance="fill">
+                        <mat-label>Categorie</mat-label>
+                        <mat-select
+                          formControlName="vCategorie"
+                          [(ngModel)]="history.idCategory"
+                        >
+                          <mat-option
+                            *ngFor="let item of lstCategories"
+                            [value]="item.idCategory"
+                          >
+                            {{ item.title }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <app-print-error
+                        [control]="f.vCategorie"
+                      ></app-print-error>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <mat-form-field class="example-full-width">
+                        <input
+                          matInput
+                          placeholder="Url"
+                          type="text"
+                          [(ngModel)]="history.url"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <mat-form-field class="example-full-width">
+                        <textarea
+                          matInput
+                          placeholder="Content"
+                          rows="10"
+                          formControlName="vContent"
+                          [(ngModel)]="history.content"
+                        ></textarea>
+                      </mat-form-field>
+                      <app-print-error [control]="f.vContent"></app-print-error>
+                    </div>
+                  </div>
+                  <button
+                    mat-raised-button
+                    type="submit"
+                    class="btn btn-danger pull-right"
+                    [disabled]="firstFormGroup.invalid || !firstFormGroup.dirty"
+                    (click)="registerHistory()"
+                  >
+                    Register
+                  </button>
+                  |
+                  <button
+                    mat-raised-button
+                    type="submit"
+                    class="btn btn-danger pull-right"
+                    (click)="back()"
+                  >
+                    Cancel
+                  </button>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

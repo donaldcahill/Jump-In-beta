@@ -1,0 +1,36 @@
+import { Writer } from '../../../model/Writer';
+import { Repository } from 'typeorm';
+import { Category } from '../../../model/Category';
+import { History } from '../../../model/History';
+import { Question } from '../../../model/Question';
+import { Answer } from '../../../model/Answer';
+import { User } from '../../../model/User';
+import { Points } from '../../../model/Points';
+import { Result } from '../../../model/Result';
+export declare class QuizService {
+    private readonly _writerRepository;
+    private readonly _categoryRepository;
+    private readonly _historyRepository;
+    private readonly _questionRepository;
+    private readonly _answerRepository;
+    private readonly _userRepository;
+    private readonly _pointsRepository;
+    private readonly _resultRepository;
+    constructor(_writerRepository: Repository<Writer>, _categoryRepository: Repository<Category>, _historyRepository: Repository<History>, _questionRepository: Repository<Question>, _answerRepository: Repository<Answer>, _userRepository: Repository<User>, _pointsRepository: Repository<Points>, _resultRepository: Repository<Result>);
+    generateUser(): Promise<User>;
+    private generateRandomString;
+    generateListUsers(): Promise<User[]>;
+    listHistoryByCategory(categoryId: number): Promise<History[]>;
+    generateQuestion(historyId: number): Promise<Question[]>;
+    generateRandomQuestion(historyId: number): Promise<Question[]>;
+    createUser(user: User): Promise<User>;
+    registerResult(result: Result): Promise<Result>;
+    registerPoints(points: Points): Promise<Points>;
+    listCategory(): Promise<Category[]>;
+    listHistoryByCategoryId(categoryId: number): Promise<History[]>;
+    generateHistoryByCategoryId(categoryId: number): Promise<History>;
+    getPointsByUserId(userId: number): Promise<number>;
+    getResultByUserId(userId: number): Promise<number>;
+    loginUser(email: string, password: string): Promise<User>;
+    getUserById(userId: number): Promise<User>;
+}

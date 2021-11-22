@@ -1,0 +1,7 @@
+{
+  "name": "Jump In Help Operator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
