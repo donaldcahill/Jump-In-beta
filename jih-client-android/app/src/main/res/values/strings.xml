@@ -7,6 +7,7 @@
     <string name="action_1">Sign Up</string>
     <string name="action_2">Sign In</string>
     <string name="action_3">Start</string>
+    <string name="action_4">Sign Out</string>
     <string name="content_description_more">Prueba</string>
     <string name="more">Mas</string>
     <string name="content_description_search">Descripcion Search</string>
